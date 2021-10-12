@@ -82,8 +82,8 @@ router.get("/:id",async(req, res)=>{
         
     }catch(err) { res.status(500).json(err);}
 })
-//Get Timeline post
 
+//Get Timeline post
 router.get("/timeline/:userId",async(req,res)=>{
 
 try{

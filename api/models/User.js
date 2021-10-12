@@ -4,7 +4,7 @@ const UserSchema = new mongoose.Schema({
     username: { type:String , required: true, min: 3, unique: true, max: 30 },
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true, min: 6 },
-    profilePicture: { type: String, default: "" },
+    profilePicture:{ type:String, default:""},
     coverPicture: { type: String, default: "" },
     followers: { type: Array, default: [] },
     followings: { type: Array, default: [] },
@@ -12,7 +12,6 @@ const UserSchema = new mongoose.Schema({
     desc: {
         type: String,
         max: 50,
-        default: "",
       },
       city: {
         type: String,
