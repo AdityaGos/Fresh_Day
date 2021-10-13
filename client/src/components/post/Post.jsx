@@ -3,6 +3,7 @@ import { MoreVert } from "@material-ui/icons";
 import { useEffect,useState } from "react";
 import {format} from "timeago.js"
 import axios from "axios";
+import {Link} from "react-router-dom"
 
 export default function Post({ post }) {
     const PF=process.env.REACT_APP_PUBLIC_FOLDER;
@@ -13,7 +14,7 @@ export default function Post({ post }) {
 
   useEffect(() => {
     const fetchUser= async ()=>{
-        const res= await axios.get(`users/${post.userId}`);
+        const res= await axios.get(`/users?userId=${post.userId}`);
         // console.log(res);
         setUser(res.data)
     };
@@ -29,11 +30,13 @@ export default function Post({ post }) {
       <div className="postWrapper">
         <div className="postTop">
           <div className="postTopLeft">
+            <Link to ={`profile/${user.username}`}> 
             <img
               className="postProfileImg"
               src={user.profilePicture || PF+"person/noAvatar.png"}
               alt=""
             />
+            </Link>
             <span className="postUsername">
               {user.username}
             </span>
