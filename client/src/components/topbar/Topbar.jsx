@@ -2,6 +2,8 @@ import "./topbar.css";
 // import { useState } from "react"
 import { Person, Search ,Chat, Notifications} from "@material-ui/icons";
 import {Link} from "react-router-dom"
+import { AuthContext } from "../../context/AuthContext";
+import { useContext } from "react";
 export default function Topbar() {
     // const [i,seti]=useState(0);
     // const list=['alex','adi','shrikant']
@@ -13,6 +15,8 @@ export default function Topbar() {
     //     if(i==list.length-1){ console.log("Reached lenght"); seti(0);}
 
     // }
+    const PF=process.env.REACT_APP_PUBLIC_FOLDER;
+    const {user}=useContext(AuthContext);
     return (
         <div className="topbarContainer">
             <div className="topbarLeft">
@@ -55,7 +59,15 @@ export default function Topbar() {
                         <span className="topbarIconbadge"> 1</span>
                     </div>
                 </div>
-                <img src="assets/assets/person/1.jpeg" alt="" className="topbarImg" />
+                <Link to ={`/profile/${user.username}`}>
+                        
+                <img src={ user.profilePicture
+                ? PF + user.profilePicture
+                : PF + "person/noAvatar.png"}
+                 alt="" className="topbarImg" />
+                </Link>
+
+           
             </div>
         </div>
     );

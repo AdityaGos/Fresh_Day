@@ -33,7 +33,9 @@ export default function Post({ post }) {
             <Link to ={`profile/${user.username}`}> 
             <img
               className="postProfileImg"
-              src={user.profilePicture || PF+"person/noAvatar.png"}
+              src={ user.profilePicture
+                ? PF + user.profilePicture
+                : PF + "person/noAvatar.png"}
               alt=""
             />
             </Link>
@@ -52,8 +54,8 @@ export default function Post({ post }) {
         </div>
         <div className="postBottom">
           <div className="postBottomLeft">
-            <img className="likeIcon" src="assets/like.png" onClick={likeHandler} alt="" />
-            <img className="likeIcon" src="assets/heart.png" onClick={likeHandler} alt="" />
+            <img className="likeIcon" src={PF+"like.png"} onClick={likeHandler} alt="" />
+            <img className="likeIcon" src={PF+"heart.png"} onClick={likeHandler} alt="" />
             <span className="postLikeCounter">{like} people like it</span>
           </div>
           <div className="postBottomRight">

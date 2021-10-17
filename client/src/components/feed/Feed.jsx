@@ -13,7 +13,7 @@ export default function Feed({username}) {
             console.log(username)
             const res= username 
             ? await axios.get("/posts/profile/"+username)
-            :await axios.get("posts/timeline/616498f1252c5de4515b6e8b");
+            :await axios.get("posts/timeline/61649909252c5de4515b6e8d");
             // if(username){ console.log(username); const res= await axios.get("localhost:8800/api/posts/profile/"+username); setPosts(res.data)}
             // else{ const res=await axios.get("posts/timeline/616498d3252c5de4515b6e89"); setPosts(res.data)}
            setPosts(res.data);
