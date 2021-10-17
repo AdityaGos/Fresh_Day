@@ -1,0 +1,29 @@
+[33mcommit 5f870beda75bcdc16426a8bd413574a387fa094b[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Aditya Goswami <adityagoswami071@gmail.com>
+Date:   Sun Oct 17 22:30:08 2021 +0530
+
+    fixed rendering profilepicture from DB/added Reducer/added Login,Register funtionality
+
+[33mcommit 6848e60b0a21fc9c6ce20eb3cc1d0f7a3d53013c[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Aditya Goswami <adityagoswami071@gmail.com>
+Date:   Wed Oct 13 06:07:26 2021 +0530
+
+    Fetching profile data from REST api
+
+[33mcommit e2955976d6a86bbf12f9cc7887663b0c53720b67[m
+Author: Aditya Goswami <adityagoswami071@gmail.com>
+Date:   Wed Oct 13 03:59:29 2021 +0530
+
+    Fetching user inside useEffect with Axios
+
+[33mcommit defea38fc43fd90cf77f95fff352c5650676e203[m
+Author: Aditya Goswami <adityagoswami071@gmail.com>
+Date:   Wed Oct 13 02:52:49 2021 +0530
+
+    added client
+
+[33mcommit 8f7fb7c422fca7ba96a0b7281cc83dbb67f5af02[m
+Author: Aditya Goswami <adityagoswami071@gmail.com>
+Date:   Wed Oct 13 02:46:27 2021 +0530
+
+    rendering dummy data offline
