@@ -18,7 +18,10 @@ export default function Feed({username}) {
             :await axios.get("posts/timeline/"+user._id);
             // if(username){ console.log(username); const res= await axios.get("localhost:8800/api/posts/profile/"+username); setPosts(res.data)}
             // else{ const res=await axios.get("posts/timeline/616498d3252c5de4515b6e89"); setPosts(res.data)}
-           setPosts(res.data);
+           setPosts(res.data.sort((p1,p2)=>{
+
+            return new Date(p2.createdAt)- new Date(p1.createdAt);
+           }));
         };
         fetchPosts();
     },[username,user._id]);
